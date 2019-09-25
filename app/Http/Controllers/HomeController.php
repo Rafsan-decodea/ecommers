@@ -10,4 +10,8 @@ class HomeController extends Controller
     {
         return view('pages.welcome');
     }
+    public function products()
+    {
+        return view('pages.products');
+    }
 }

@@ -18,8 +18,12 @@
                   <div class="col-md-2">
                       <div class="card" style="width:400px">
                           <div class="card" style="width: 18rem;">
-                         @foreach ($productImage as $item)
-                         <img src="{{ asset('/'.  $item->image ) }}" class="card-img-top" alt="...">
+                         @php $i =1 ; @endphp  
+                         @foreach ($productImage as $item2)
+                         @if (1>0)
+                         <img src="{{ asset('/'.  $item2->images ) }}" class="card-img-top" alt="...">
+                         @endif
+                         @php $i--; @endphp
                          @endforeach
                              
                              

@@ -15,6 +15,7 @@ class HomeController extends Controller
     public function products()
     {
         $data['product'] = Product::orderBy('id','desc')->get();
+        $data['productImage']=ProductImage::orderBy('id','desc')->get();
         return view('pages.products',$data);
     }
 }

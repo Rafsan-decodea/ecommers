@@ -12,22 +12,25 @@
             </div>
           @foreach ($product as $item )
               
-          @endforeach  
+            
             <div class="widget">
               <div class="row">
                   <div class="col-md-2">
                       <div class="card" style="width:400px">
                           <div class="card" style="width: 18rem;">
-                         
-                              <img src="{{ asset('/'. 'p.jpg') }}" class="card-img-top" alt="...">
+                         @foreach ($productImage as $item)
+                         <img src="{{ asset('/'.  $item->image ) }}" class="card-img-top" alt="...">
+                         @endforeach
+                             
                              
                               <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <P> {{ $item->title }}</p>
+                                <p class="card-text">{{ $item->title }}</p>
+                                <P> {{ $item->description }}</p>
                                 <p> {{ $item->price }}</p>
                               </div>
-                            
+                              
                             </div>
+                            @endforeach
                             @endsection
                   </div>
               </div>

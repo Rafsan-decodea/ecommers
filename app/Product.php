@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public function product()
+    public function images()
     {
-        return $this->belongsTo(Product::class);
+        return $this->hasMany(ProductImage::class);
     }
 }

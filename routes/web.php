@@ -12,4 +12,7 @@
 */
 
 Route::get('/',('HomeController@index'))->name('index');
-Route::get('/product','HomeController@products')->name('produts');
+Route::get('/product','HomeController@products')->name('products');
+
+Route::get('/admin','AdminController@index')->name('admin.index');
+Route::get('/admin-create','AdminController@product_create')->name('admin.product');

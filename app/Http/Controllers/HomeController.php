@@ -18,4 +18,5 @@ class HomeController extends Controller
         $data['productImage']=ProductImage::orderBy('id','desc')->get();
         return view('pages.products',$data);
     }
+  
 }

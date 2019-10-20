@@ -15,7 +15,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{{ asset ('css/admin/css/style.css')}}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{  asset ('images/favicon.png')}}" />
+  <link rel="shortcut icon" href="{{  asset ('css/admin/images/favicon.png')}}" />
 </head>
 
 <body>
@@ -108,7 +108,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                  <img src="{{ asset ('css/admin/images/faces/face4.jpg')}}" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-medium">David Grey
@@ -122,7 +122,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                  <img src="{{asset ('css/admin/images/faces/face2.jpg')}}" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-medium">Tim Cook
@@ -136,7 +136,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                  <img src="{{ asset ('css/admin/images/faces/face3.jpg')}}" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-medium"> Johnson
@@ -151,7 +151,7 @@
           </li>
           <li class="nav-item d-none d-lg-block">
             <a class="nav-link" href="#">
-              <img class="img-xs rounded-circle" src="images/faces/face4.jpg" alt="">
+              <img class="img-xs rounded-circle" src="{{ asset ('css/admin/images/faces/face4.jpg')}}" alt="">
             </a>
           </li>
         </ul>
@@ -167,7 +167,7 @@
         <ul class="nav">
           <li class="nav-item nav-profile">
             <div class="nav-link">
-              <div class="profile-image"> <img src="images/faces/face4.jpg" alt="image"/> <span class="online-status online"></span> </div>
+              <div class="profile-image"> <img src="{{ asset ('css/admin/images/faces/face4.jpg')}}" alt="image"/> <span class="online-status online"></span> </div>
               <div class="profile-name">
                 <p class="name">Richard V.Welsh</p>
                 <p class="designation">Manager</p>
@@ -175,15 +175,15 @@
               </div>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="index.html"><img class="menu-icon" src="images/menu_icons/01.png" alt="menu icon"><span class="menu-title">Dashboard</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/widgets.html"><img class="menu-icon" src="images/menu_icons/02.png" alt="menu icon"><span class="menu-title">Widgets</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html"><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">Buttons</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html"><img class="menu-icon" src="images/menu_icons/04.png" alt="menu icon"><span class="menu-title">Form</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/charts/chartjs.html"><img class="menu-icon" src="images/menu_icons/05.png" alt="menu icon"><span class="menu-title">Charts</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/tables/basic-table.html"><img class="menu-icon" src="images/menu_icons/06.png" alt="menu icon"><span class="menu-title">Table</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/icons/font-awesome.html"><img class="menu-icon" src="images/menu_icons/07.png" alt="menu icon"> <span class="menu-title">Icons</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/01.png')}}" alt="menu icon"><span class="menu-title">Dashboard</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/widgets.html"><img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/02.png')}}" alt="menu icon"><span class="menu-title">Widgets</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html"><img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/03.png')}}" alt="menu icon"><span class="menu-title">Buttons</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html"><img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/04.png')}}" alt="menu icon"><span class="menu-title">Form</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/charts/chartjs.html"><img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/05.png')}}" alt="menu icon"><span class="menu-title">Charts</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/tables/basic-table.html"><img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/06.png')}}" alt="menu icon"><span class="menu-title">Table</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/icons/font-awesome.html"><img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/07.png')}}" alt="menu icon"> <span class="menu-title">Icons</span></a></li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="images/menu_icons/08.png" alt="menu icon"> <span class="menu-title">General Pages</span><i class="menu-arrow"></i></a>
+            <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/08.png')}}" alt="menu icon"> <span class="menu-title">General Pages</span><i class="menu-arrow"></i></a>
             <div class="collapse" id="general-pages">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html">Blank Page</a></li>
@@ -194,7 +194,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html"><img class="menu-icon" src="images/menu_icons/09.png" alt="menu icon"> <span class="menu-title">Typography</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html"><img class="menu-icon" src="{{ asset ('css/admin/images/menu_icons/09.png')}}" alt="menu icon"> <span class="menu-title">Typography</span></a></li>
           <li class="nav-item purchase-button"><a class="nav-link" href="https://www.bootstrapdash.com/product/star-admin-pro/" target="_blank">Get full version</a></li>
         </ul>
       </nav>
@@ -393,7 +393,7 @@
                           <tr>
                             <td>
                               <div class="flag">
-                                <img src="../images/flags/US.png">
+                                <img src="{{ asset('css/admin/../images/flags/US.png')}}">
                               </div>
                             </td>
                             <td>USA</td>
@@ -407,7 +407,7 @@
                           <tr>
                             <td>
                               <div class="flag">
-                                <img src="../images/flags/DE.png">
+                                <img src="{{ asset ('css/admin/../images/flags/DE.png')}}">
                               </div>
                             </td>
                             <td>Germany</td>

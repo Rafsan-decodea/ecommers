@@ -17,3 +17,4 @@ Route::get('/product','HomeController@products')->name('products');
 Route::get('/admin','AdminController@index')->name('admin.index');
 Route::get('/admin-create','AdminController@product_create')->name('admin.product');
 Route::get('/create','AdminController@create')->name('admin.create');
+Route::post('/create_success','AdminController@store')->name('admin.product.store');

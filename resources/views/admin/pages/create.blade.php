@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-body">
             <form method="POST" action="{{ route('admin.product.store') }}">
-                  {{ csrf_field() }}}
+                  {{ csrf_field() }}
                            <div class="form-group">
                                <label>Catagory</label>
                                <select name="catagory_id">
@@ -24,7 +24,7 @@
                             </div>
                             <div class="form-group">
                               <label >Title</label>
-                              <input type="text" name="title" class="form-control"   placeholder="Title">
+                              <input type="text" name="title" class="form-control"   placeholder="Title"/>
                             </div>
                             <div class="form-group">
                               <label >Descriptions</label>

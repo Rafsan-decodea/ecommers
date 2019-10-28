@@ -160,6 +160,7 @@
         </button>
       </div>
     </nav>
+    
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
 
@@ -204,6 +205,8 @@
                   </ul>
       </nav>
       @yield('admin_content')
+
+
       <!-- partial -->
 
   <!-- container-scroller -->

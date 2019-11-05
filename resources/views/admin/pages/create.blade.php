@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="form-group">
                                 <label>image</label>
-                                <input type="file" name="productImage" />
+                                <input type="file" name="ProductImage" />
                                 </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </form>

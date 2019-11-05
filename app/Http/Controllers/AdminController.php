@@ -42,12 +42,13 @@ class AdminController extends Controller
         {
             $image = $request->file('ProductImage');
             $img = time() . '.'. $image->getClientOriginalExtension();
-            $location = public_path('/'.$img);
+            $location = public_path('/'. $img);
+       
             Image::make($img)->save($location);
 
             $img_data = new ProductImage;
-            $img_data->product_id = $product_obj->product_id;
-            $img_data->Image = $img;
+            $img_data->product_id = $product_obj->id;
+            $img_data->images = $img;
             $img_data->save();
 
 

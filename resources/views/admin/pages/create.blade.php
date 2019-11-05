@@ -6,7 +6,7 @@
     <div class="content-wrapper">
         <div class="card">
             <div class="card-body">
-            <form method="POST" action="{{ route('admin.product.store') }}">
+            <form method="POST" action="{{ route('admin.product.store') }}" enctype="multipart/form-data" >
                   {{ csrf_field() }}
                            <div class="form-group">
                                <label>Catagory</label>
@@ -54,9 +54,15 @@
                                         <option value="2">fake_admin</option>
                                     </select>
                                 </div>
-
+                                <div class="form-group">
+                                <label>image</label>
+                                <input type="file" name="productImage" />
+                                </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </form>
+
+                         
+                        
 
             </div>
         </div>

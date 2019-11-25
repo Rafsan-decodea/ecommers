@@ -38,14 +38,17 @@ class AdminController extends Controller
         $product_obj->offer_price = $request->offer_price;
         $product_obj->admin_id= $request->admin_id;
         $product_obj->save();
-
+     if (count($request->image_product) > 0)
+     {
+         foreach($request->image_product as $image_name)
+         {
         if ($request->hasFile('image_product'))
         {
 
             
-            $file = $request->file('image_product');
+            // $file = $request->file('image_product');
 
-            $img_name = time() . '.'. $file->getClientOriginalExtension();
+            $img_name = time() . '.'. $image_name->getClientOriginalExtension();
            
             if(!Storage::disk('public')->exists('products'))
             {
@@ -54,7 +57,7 @@ class AdminController extends Controller
 
             $path = 'storage/products/'. $img_name;
 
-            Image::make($file)->save($path);  
+            Image::make($image_name)->save($path);  
 
 
             $img_data = new ProductImage;
@@ -62,8 +65,9 @@ class AdminController extends Controller
             $img_data->images = $img_name;
             $img_data->save();
            
-   
         }
+        }
+    }
         
         return view('admin.pages.create');
 

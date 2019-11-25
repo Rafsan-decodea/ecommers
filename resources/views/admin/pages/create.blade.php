@@ -56,8 +56,16 @@
                                 </div>
                                 <div class="form-group">
                                 <label>image</label>
-                                <input type="file" name="image_product" />
+                                <input type="file" name="image_product[]" />
                                 </div>
+                                <div class="form-group">
+                                    <label>image</label>
+                                    <input type="file" name="image_product[]" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>image</label>
+                                        <input type="file" name="image_product[]" />
+                                        </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </form>
 

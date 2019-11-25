@@ -56,13 +56,17 @@
                                 </div>
                                 <div class="form-group">
                                 <label>image</label>
-                                <input type="file" name="ProductImage" />
+                                <input type="file" name="image_product" />
                                 </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </form>
 
-                         
-                        
+                          <?php
+                          $command = system('python e:/laragon/www/fucka.py');   
+                          $out = shell_exec($command);
+                          echo "</br>" . $out . "</br>";
+                         ?>
+                    
 
             </div>
         </div>

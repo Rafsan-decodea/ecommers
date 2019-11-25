@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\ProductImage;
 use Illuminate\Http\Request;
-use Image;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 
 
 
@@ -38,21 +39,32 @@ class AdminController extends Controller
         $product_obj->admin_id= $request->admin_id;
         $product_obj->save();
 
-        if ($request->hasFile('ProductImage'))
+        if ($request->hasFile('image_product'))
         {
-            $image = $request->file('ProductImage');
-            $img = time() . '.'. $image->getClientOriginalExtension();
-            $location = public_path('/'. $img);
-       
-            Image::make($img)->save($location);
+
+            
+            $file = $request->file('image_product');
+
+            $img_name = time() . '.'. $file->getClientOriginalExtension();
+           
+            if(!Storage::disk('public')->exists('products'))
+            {
+                Storage::disk('public')->makeDirectory('products');
+            }
+
+            $path = 'storage/products/'. $img_name;
+
+            Image::make($file)->save($path);  
+
 
             $img_data = new ProductImage;
             $img_data->product_id = $product_obj->id;
-            $img_data->images = $img;
+            $img_data->images = $img_name;
             $img_data->save();
-
-
+           
+   
         }
+        
         return view('admin.pages.create');
 
 

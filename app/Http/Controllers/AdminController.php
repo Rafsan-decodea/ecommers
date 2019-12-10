@@ -25,6 +25,15 @@ class AdminController extends Controller
     }
     public function store(Request $request)
     {
+       $request->validate([
+            'title' => 'required|25',
+            'description'=>'required',
+            'slug' => 'required',
+            'quantity' =>'required',
+            'price' =>'required',
+             'admin_id'=>'required',
+       ]);
+
 
         $product_obj = new Product;
         $product_obj->catagory_id = $request->catagory_id;

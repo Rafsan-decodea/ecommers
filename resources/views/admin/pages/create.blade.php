@@ -66,13 +66,34 @@
                                         <label>image</label>
                                         <input type="file" name="image_product[]" />
                                         </div>
+                                        {{-- <div class="form-group">
+                                            <label>Give Command to Stop this Server </label>
+                                            <input  name="stop"  />
+                                    --}}
+                                    @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <ul>
+                                            @foreach ($errors->all as $error )
+                                            <p>
+                                                {{ $error }}
+                                            </P>
+                                                
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                      @endif         
+            
+    
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </form>
-
+                        </div>  
+                      
                           <?php
-                          $command = system('python e:/laragon/www/fucka.py');   
-                          $out = shell_exec($command);
-                          echo "</br>" . $out . "</br>";
+                        //   $a  = $_POST["stop"];
+                        //   $s = system('python F:\laragon\www\kola.py -f $a');   
+                        //   $out = shell_exec($s);
+                        //   echo "</br>" . $out . "</br>";
                          ?>
                     
 
